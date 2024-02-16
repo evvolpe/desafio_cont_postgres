@@ -9,7 +9,7 @@ O comando atende aos seguintes requisitos:
 
 ## Comando
 
-**docker run --rm -it -p 5432:5432 \
+**docker run -d -it -p 5432:5432 \
   -e POSTGRES_USER=docker_usr \
   -e POSTGRES_PASSWORD=docker_pwd \
   -e POSTGRES_DB=curso_docker \
@@ -18,13 +18,14 @@ O comando atende aos seguintes requisitos:
 ## Explicação do comando:
 
 docker run: Inicia um container.
---rm: Remove o container automaticamente após sua parada.
+-d: Executa o BD em modo background.
 -it: Permite a interação com o container através de um terminal.
 -p 5432:5432: Exporta a porta 5432 do container para a porta 5432 do host. Isso permite que o cliente PostgreSQL do host se conecte ao banco de dados dentro do container.
 -e POSTGRES_USER=docker_usr: Define a variável de ambiente POSTGRES_USER com o valor docker_usr. Essa variável é usada para configurar o nome de usuário do banco de dados.
 -e POSTGRES_PASSWORD=docker_pwd: Define a variável de ambiente POSTGRES_PASSWORD com o valor docker_pwd. Essa variável é usada para configurar a senha do banco de dados.
 -e POSTGRES_DB=curso_docker: Define a variável de ambiente POSTGRES_DB com o valor curso_docker. Essa variável é usada para configurar o nome do banco de dados.
 postgres:latest: A imagem do Docker que contém o PostgreSQL.
+
 Uso do comando:
 
 Abra um terminal.
