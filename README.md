@@ -1,6 +1,6 @@
 # Desafio Postgres
 
-Este arquivo fornece um comando para criar um banco de dados PostgreSQL no ambiente do desenvolvedor de forma transparente. 
+Este arquivo fornece um comando para criar um banco de dados PostgreSQL no ambiente do desenvolvedor de forma transparente. <br>
 O comando atende aos seguintes requisitos:
 
 * Nome do banco de dados: curso_docker
@@ -39,5 +39,5 @@ Para se conectar ao banco de dados, você pode usar um cliente PostgreSQL como o
 psql -h localhost -p 5432 -U docker_usr -W curso_docker
 Observações:
 
+#Atenção <br>
 Este comando cria um banco de dados em memória. Isso significa que os dados serão perdidos quando o container for parado.
-Se você precisar de um banco de dados persistente, você pode usar um volume Docker para armazenar os dados.
